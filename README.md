@@ -82,7 +82,8 @@ kemudian gunakan opsi dari **aes-128-cbc**, **aes-192-cbc**, **aes-256-cbc**.
 file enkripsi yang sudah dilakukan dengan openssl **aes-256-cbc** dan jelaskan
 prinsip konsep dari serangan brute-force pada studi kasus tersebut.
 
-    Berikut serangan brute-force yang dilakukan:
+    Berikut serangan brute-force menggunakan [list password](list-key-punya-kita.txt)
+    terhadap [file tersebut](text-encoded-aes256cbc.txt):
     
     ```console
     imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ bruteforce-salted-openssl -f list-key-punya-kita.txt -d sha256 text-encoded-aes256cbc.txt
