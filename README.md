@@ -13,6 +13,39 @@ Kalkulasikan atau implementasikan cryptography hashes.
 **SHA3-224**, **SHA3-384**.  
 **note**: gunakan library python, *hashlib*.
 
+    ```python
+    #!/usr/bin/env python3
+
+    # M Imam Pratama
+    # 09021281722063
+
+    import hashlib, binascii
+
+    text = "hello"
+    data = text.encode('utf8')
+
+    sha224hash = hashlib.sha224(data).digest()
+    sha384hash = hashlib.sha384(data).digest()
+    sha3_224hash = hashlib.sha3_224(data).digest()
+    sha3_384hash = hashlib.sha3_384(data).digest()
+
+    print("SHA-224: ", binascii.hexlify(sha224hash))
+    print("SHA-384: ", binascii.hexlify(sha384hash))
+    print("SHA3-224: ", binascii.hexlify(sha3_224hash))
+    print("SHA3-384: ", binascii.hexlify(sha3_384hash))
+
+    ```
+    
+    output:
+    
+    ```console
+    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ python3 a_1.py                                                         
+    SHA-224:  b'ea09ae9cc6768c50fcee903ed054556e5bfc8347907f12598aa24193'
+    SHA-384:  b'59e1748777448c69de6b800d7a33bbfb9ff1b463e44354c3553bcdb9c666fa90125a3c79f90397bdf5f6a13de828684f'
+    SHA3-224:  b'b87f88c72702fff1748e58b87e9141a42c0dbedc29a78cb0d4a5cd81'
+    SHA3-384:  b'720aea11019ef06440fbf05d87aa24680a2153df3907b23631e7177ce620fa1330ff07c0fddee54699a4c3ee0ee9d887'
+    ```
+    
 2. Generate-lah mennggunakan `openssl` sebuah file berisikan string, text,
 kemudian gunakan opsi dari **aes-128-cbc**, **aes-192-cbc**, **aes-256-cbc**.  
 **note**: lakukan seperti yang ada pada contoh menggunakan `openssl`.
