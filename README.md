@@ -2,7 +2,7 @@ M Imam Pratama
 09021281722063  
 IF Reg A 17  
 
-## Tugas 1
+## Tugas 1 Keamanan Jaringan Komputer
 
 ### a. Cryptography Hash Functions Assignment
 
@@ -41,7 +41,7 @@ Kalkulasikan atau implementasikan cryptography hashes.
     output:
     
     ```console
-    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ python3 a_1.py                                                         
+    imampt@galatulis:~/Tugas1KJK$ python3 a_1.py
     SHA-224:  b'ea09ae9cc6768c50fcee903ed054556e5bfc8347907f12598aa24193'
     SHA-384:  b'59e1748777448c69de6b800d7a33bbfb9ff1b463e44354c3553bcdb9c666fa90125a3c79f90397bdf5f6a13de828684f'
     SHA3-224:  b'b87f88c72702fff1748e58b87e9141a42c0dbedc29a78cb0d4a5cd81'
@@ -55,7 +55,7 @@ kemudian gunakan opsi dari **aes-128-cbc**, **aes-192-cbc**, **aes-256-cbc**.
     buat [file](text-original.txt) berisi string "hello":
 
     ```console
-    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ echo 'hello' > text-original.txt
+    imampt@galatulis:~/Tugas1KJK$ echo 'hello' > text-original.txt
     ```
 
     command-command untuk membuat enkripsi dengan ketiga opsi di atas:
@@ -69,7 +69,7 @@ kemudian gunakan opsi dari **aes-128-cbc**, **aes-192-cbc**, **aes-256-cbc**.
     Gunakan password "halo"
 
     ```console
-    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ openssl enc -aes-128-cbc -in text-original.txt -out text-encoded-aes128cbc.txt
+    imampt@galatulis:~/Tugas1KJK$ openssl enc -aes-128-cbc -in text-original.txt -out text-encoded-aes128cbc.txt
     enter aes-128-cbc encryption password:
     Verifying - enter aes-128-cbc encryption password:
     *** WARNING : deprecated key derivation used.
@@ -86,7 +86,7 @@ prinsip konsep dari serangan brute-force pada studi kasus tersebut.
     terhadap [file tersebut](text-encoded-aes256cbc.txt):
     
     ```console
-    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ bruteforce-salted-openssl -f list-key-punya-kita.txt -d sha256 text-encoded-aes256cbc.txt
+    imampt@galatulis:~/Tugas1KJK$ bruteforce-salted-openssl -f list-key-punya-kita.txt -d sha256 text-encoded-aes256cbc.txt
     Warning: using dictionary mode, ignoring options -b, -e, -l, -m and -s.
     
     Tried passwords: 2106
@@ -99,7 +99,7 @@ prinsip konsep dari serangan brute-force pada studi kasus tersebut.
     Tanpa file list password:
 
     ```console
-    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ bruteforce-salted-openssl -d sha256 text-encoded-aes256cbc.txt
+    imampt@galatulis:~/Tugas1KJK$ bruteforce-salted-openssl -d sha256 text-encoded-aes256cbc.txt
     Tried / Total passwords: 1598403 / 2,21919e+14
     Tried passwords per second: 799201,500000
     Last tried password: 5gnh
