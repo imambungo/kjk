@@ -78,7 +78,7 @@ kemudian gunakan opsi dari **aes-128-cbc**, **aes-192-cbc**, **aes-256-cbc**.
 
 ### b. Brute-force attack
 
-1. Gunakan serangan **brute-force** menggunakan `brute-salted-openssl` terhadap
+1. Gunakan serangan **brute-force** menggunakan `bruteforce-salted-openssl` terhadap
 file enkripsi yang sudah dilakukan dengan openssl **aes-256-cbc** dan jelaskan
 prinsip konsep dari serangan brute-force pada studi kasus tersebut.
 
