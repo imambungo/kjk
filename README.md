@@ -123,3 +123,11 @@ prinsip konsep dari serangan brute-force pada studi kasus tersebut.
     Password candidate: kiB6
     ^C
     ```
+
+    Kedua cara di atas sama-sama merupakan serangan brute-force, bedanya yang
+    pertama lebih terfokus dan cepat karena hanya mencoba mencocokkan dengan
+    list password yang sudah terbukti sering dipakai orang. Kelemahannya adalah
+    cara ini tidak tidak ampuh untuk mendekripsi password yang kompleks.
+
+    Dengan cara kedua, passwordnya pasti didapat, tapi butuh waktu yang lama
+    karena mencoba semua kemungkinan.
