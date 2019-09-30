@@ -41,7 +41,7 @@ Kalkulasikan atau implementasikan cryptography hashes.
     output:
     
     ```console
-    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ python3 a_1.py                                                         
+    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ python3 a_1.py
     SHA-224:  b'ea09ae9cc6768c50fcee903ed054556e5bfc8347907f12598aa24193'
     SHA-384:  b'59e1748777448c69de6b800d7a33bbfb9ff1b463e44354c3553bcdb9c666fa90125a3c79f90397bdf5f6a13de828684f'
     SHA3-224:  b'b87f88c72702fff1748e58b87e9141a42c0dbedc29a78cb0d4a5cd81'
