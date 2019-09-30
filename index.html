@@ -180,7 +180,7 @@ IF Reg A 17</p>
 'hello', dengan python seperti diberikan pada contoh: <strong>SHA-224</strong>, <strong>SHA-384</strong>,
 <strong>SHA3-224</strong>, <strong>SHA3-384</strong>.<br>
 <strong>note</strong>: gunakan library python, <em>hashlib</em>.</p>
-<p>Tulis <a href="/imambungo/kjk/blob/master/a_1.py">programnya</a>:</p>
+<p>Tulis <a href="/kjk/a_1.py">programnya</a>:</p>
 <div class="highlight highlight-source-python"><pre><span class="pl-c"><span class="pl-c">#</span>!/usr/bin/env python3</span>
 
 <span class="pl-c"><span class="pl-c">#</span> M Imam Pratama</span>
@@ -212,7 +212,7 @@ sha3_384hash <span class="pl-k">=</span> hashlib.sha3_384(data).digest()
 <p>Generate-lah mennggunakan <code>openssl</code> sebuah file berisikan string, text,
 kemudian gunakan opsi dari <strong>aes-128-cbc</strong>, <strong>aes-192-cbc</strong>, <strong>aes-256-cbc</strong>.<br>
 <strong>note</strong>: lakukan seperti yang ada pada contoh menggunakan <code>openssl</code>.</p>
-<p>buat <a href="/imambungo/kjk/blob/master/text-original.txt">file</a> berisi string "hello":</p>
+<p>buat <a href="/kjk/text-original.txt">file</a> berisi string "hello":</p>
 <div class="highlight highlight-text-shell-session"><pre><span class="pl-e">imampt@galatulis:~/Tugas1KJK</span>$ <span class="pl-s1"><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">'</span>hello<span class="pl-pds">'</span></span> <span class="pl-k">&gt;</span> text-original.txt</span></pre></div>
 <p>command-command untuk membuat enkripsi dengan ketiga opsi di atas:</p>
 <pre><code>openssl enc -aes-128-cbc -in text-original.txt -out text-encoded-aes128cbc.txt
@@ -233,8 +233,8 @@ openssl enc -aes-256-cbc -in text-original.txt -out text-encoded-aes256cbc.txt
 <p>Gunakan serangan <strong>brute-force</strong> menggunakan <code>bruteforce-salted-openssl</code> terhadap
 file enkripsi yang sudah dilakukan dengan openssl <strong>aes-256-cbc</strong> dan jelaskan
 prinsip konsep dari serangan brute-force pada studi kasus tersebut.</p>
-<p>Berikut serangan brute-force menggunakan <a href="/imambungo/kjk/blob/master/list-key-punya-kita.txt">list password</a>
-terhadap <a href="/imambungo/kjk/blob/master/text-encoded-aes256cbc.txt">file tersebut</a>:</p>
+<p>Berikut serangan brute-force menggunakan <a href="/kjk/list-key-punya-kita.txt">list password</a>
+terhadap <a href="/kjk/text-encoded-aes256cbc.txt">file tersebut</a>:</p>
 <div class="highlight highlight-text-shell-session"><pre><span class="pl-e">imampt@galatulis:~/Tugas1KJK</span>$ <span class="pl-s1">bruteforce-salted-openssl -f list-key-punya-kita.txt -d sha256 text-encoded-aes256cbc.txt</span>
 <span class="pl-c1">Warning: using dictionary mode, ignoring options -b, -e, -l, -m and -s.</span>
 
