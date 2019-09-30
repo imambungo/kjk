@@ -13,6 +13,8 @@ Kalkulasikan atau implementasikan cryptography hashes.
 **SHA3-224**, **SHA3-384**.  
 **note**: gunakan library python, *hashlib*.
 
+    Tulis [programnya](a_1.py):
+
     ```python
     #!/usr/bin/env python3
 
@@ -49,6 +51,30 @@ Kalkulasikan atau implementasikan cryptography hashes.
 2. Generate-lah mennggunakan `openssl` sebuah file berisikan string, text,
 kemudian gunakan opsi dari **aes-128-cbc**, **aes-192-cbc**, **aes-256-cbc**.  
 **note**: lakukan seperti yang ada pada contoh menggunakan `openssl`.
+
+    buat [file](text-original.txt) berisi string "hello":
+
+    ```console
+    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ echo 'hello' > text-original.txt
+    ```
+
+    command-command untuk membuat enkripsi dengan ketiga opsi di atas:
+
+    ```
+    openssl enc -aes-128-cbc -in text-original.txt -out text-encoded-aes128cbc.txt
+    openssl enc -aes-192-cbc -in text-original.txt -out text-encoded-aes192cbc.txt
+    openssl enc -aes-256-cbc -in text-original.txt -out text-encoded-aes256cbc.txt
+    ```
+
+    Gunakan password "halo"
+
+    ```console
+    imampt@galatulis:~/Documents/Kuliah/KJK/tugas1$ openssl enc -aes-128-cbc -in text-original.txt -out text-encoded-aes128cbc.txt
+    enter aes-128-cbc encryption password:
+    Verifying - enter aes-128-cbc encryption password:
+    *** WARNING : deprecated key derivation used.
+    Using -iter or -pbkdf2 would be better.
+    ```
 
 ### b. Brute-force attack
 
